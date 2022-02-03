@@ -48,8 +48,10 @@ const Main = () => {
 
   const saveBlog = (e: any) => {
     e.preventDefault()
+    // @ts-ignore
     if (blogTitle && blogDescription && image?._id && blog) {
       const doc = {
+        // @ts-ignore
         _type: 'post',
         title: blogTitle,
         // create the slug for the blog
@@ -59,11 +61,13 @@ const Main = () => {
           _type: 'image',
           asset: {
             _type: 'reference',
+            // @ts-ignore
             _ref: image?._id,
           },
         },
         author: {
           _type: 'reference',
+          // @ts-ignore
           _ref: session?.user?.email.split('@')[0],
         },
         body: [
@@ -81,6 +85,7 @@ const Main = () => {
             markDefs: [],
           },
         ],
+        // @ts-ignore
         slug: {
           _type: 'slug',
           current: slugify(blogTitle),
@@ -143,6 +148,7 @@ const Main = () => {
             ) : (
               <div className="relative h-full">
                 <img
+                  // @ts-ignore
                   src={image?.url}
                   alt="uploaded-pic"
                   className="h-full w-full"

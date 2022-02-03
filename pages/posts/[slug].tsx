@@ -16,6 +16,7 @@ const Slug = ({ post }: Props) => {
   const router = useRouter()
   const { slug } = router.query
   useEffect(() => {
+    // @ts-ignore
     const query = `*[_type == "author" && _id == "${post.author._ref}"]{
       name,
       image

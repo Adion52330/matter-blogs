@@ -24,7 +24,7 @@ const Header = () => {
     if (session?.user) {
       const doc = {
         _type: 'author',
-        _id: `${session.user.email.split('@')[0]}`,
+        _id: `${session && session?.user?.email?.split('@')[0]}`,
         name: session.user.name,
         image: session.user.image,
       }

@@ -43,12 +43,19 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-3 p-2 sm:grid-cols-2 md:gap-6 md:p-6 lg:grid-cols-3">
           {blogs.map((blog) => (
             <Element
+              // @ts-ignore
               key={blog._id}
+              // @ts-ignore
               slug={blog.slug.current}
+              // @ts-ignore
               blogTitle={blog?.title}
+              // @ts-ignore
               description={blog?.description}
+              // @ts-ignore
               body={blog?.body}
+              // @ts-ignore
               image={urlFor(blog?.mainImage).url()!}
+              // @ts-ignore
               author={blog?.author?._ref}
             />
           ))}
