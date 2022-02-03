@@ -182,7 +182,7 @@ const Main = () => {
   }
 
   return (
-    <div className="m-2 flex items-center justify-between bg-yellow-500 p-7 font-sans">
+    <div className="m-2 flex items-center justify-between flex-wrap bg-yellow-500 p-7 font-sans">
       <div>
         <h1 className="text-6xl font-bold">Welcome User</h1>
         <p className="text-lg">Sign In to get started</p>
