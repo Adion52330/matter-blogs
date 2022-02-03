@@ -123,7 +123,7 @@ const Main = () => {
           Add Your Blog
         </button>
         {addBlog && (
-          <form className="animate m-3 max-w-full flex flex-col items-center space-y-5 border-4 py-5">
+          <form className="animate m-3 max-w-full flex flex-col items-center space-y-5 border-4 px-2 py-5">
             <input
               type="text"
               placeholder="Title"
