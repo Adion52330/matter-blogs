@@ -7,17 +7,6 @@ export default NextAuth({
     GoogleProvider({
       clientId: "1079624130444-8nv33nrahk1ahem1grkcrqvi7iumm59a.apps.googleusercontent.com",
       clientSecret: "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",
-      authorization: {
-        params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code"
-        }
-      }
     })
   ],
-  jwt: {
-      encryption: true
-  },
-  secret: process.env.secret
 }) 
