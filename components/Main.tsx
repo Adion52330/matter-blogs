@@ -123,20 +123,20 @@ const Main = () => {
           Add Your Blog
         </button>
         {addBlog && (
-          <form className="animate m-3 flex flex-col items-center space-y-5 border-4 py-5">
+          <form className="animate m-3 max-w-full flex flex-col items-center space-y-5 border-4 py-5">
             <input
               type="text"
               placeholder="Title"
               value={blogTitle}
               onChange={(e) => setBlogTitle(e.target.value)}
-              className="bg-gray-300 p-2 text-2xl font-bold outline-none"
+              className="bg-gray-300 w-full p-2 text-2xl font-bold outline-none"
             />
             <input
               type="text"
               placeholder="Description"
               value={blogDescription}
               onChange={(e) => setBlogDescription(e.target.value)}
-              className="bg-gray-300 p-2 text-lg  outline-none"
+              className="bg-gray-300 w-full p-2 text-lg  outline-none"
             />
             {!image ? (
               <input
@@ -166,7 +166,7 @@ const Main = () => {
               placeholder="Blog"
               value={blog}
               onChange={(e) => setBlog(e.target.value)}
-              className="bg-gray-300 p-2 outline-none"
+              className="bg-gray-300 w-full p-2 outline-none"
               cols={30}
             ></textarea>
             <input
