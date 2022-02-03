@@ -9,4 +9,12 @@ export default NextAuth({
       clientSecret: "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",
     })
   ],
-}) 
+  // solve the problem of the redirect to the login page
+  secret: "my-super-secret-key",
+  // Configure the session.
+  session: {
+    jwt: true,
+    // The session cookie will have the same name as the provider
+    fromExtension: true,
+  },
+});
